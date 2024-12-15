@@ -11,7 +11,9 @@ img {
   margin: 1rem;
 }
 .mainlogo img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 .gallery div div {
   display: flex;
@@ -20,23 +22,26 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 .gallery img {
+  width: 900px;
+  height: 600px;
+  object-fit: cover;
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   padding: 15px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.2); 
+}
 #gallery-modal .modal-img {
   width: 100%;
 }
-
 .h1 {
   margin-bottom: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
