@@ -1,28 +1,44 @@
-img {
-  max-width: 100%;
-}
-.gallery {
-  padding: 80px 0;
-}
 .mainlogo {
   position: absolute;
   height: 10rem;
   width: 10rem;
   margin: 1rem;
+  top: 20px;
+  left: 20px;
 }
+
 .mainlogo img {
   width: auto;
   max-width: 100%;
   height: auto;
 }
+
+.gallery {
+  padding: 80px 0;
+}
+
+.h1 {
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 50px;
+  background: -webkit-linear-gradient(#eee, #d86262);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 130px;
+  padding-bottom: 40px;
+}
+
+/* Gallery settings */
 .gallery div div {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: row;
+  gap: 10px;
 }
+
 .gallery img {
   width: 900px;
   height: 600px;
@@ -35,24 +51,18 @@ img {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-  filter: brightness(1.2); 
+  filter: brightness(1.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
+
 #gallery-modal .modal-img {
   width: 100%;
 }
-.h1 {
-  margin-bottom: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  font-size: 50px;
-  background: -webkit-linear-gradient(#eee, #d86262);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 .bg-img {
   position: fixed;
   top: 0;
@@ -61,4 +71,39 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 600px) {
+  .mainlogo {
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    margin: 0.5rem;
+    top: 10px;
+    left: 20px;
+  }
+
+  .gallery {
+    padding: 40px 10px;
+  }
+
+  .h1 {
+    font-size: 30px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  .gallery div div {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 10px;
+    box-shadow: none;
+  }
 }
