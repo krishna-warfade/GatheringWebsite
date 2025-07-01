@@ -1,11 +1,12 @@
-### 📁 Project Folder Structure
+📁 Project Folder Structure
+```bash
 GatheringWebsite/
-├── .vscode/ # VS Code settings (optional)
-├── contact/ # Contact page
-├── events/ # Event-related content
-├── gallery2/ # Image gallery section
-├── main/ # Home page
-├── sports/ # Sports/games section
-├── team/ # Team members/contributors page
-├── style.css # Main stylesheet
-└── README.md # Project documentation
+├── .vscode/
+├── contact/
+├── events/
+├── gallery2/
+├── main/
+├── sports/
+├── team/
+├── style.css
+└── README.md
