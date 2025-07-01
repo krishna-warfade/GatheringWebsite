@@ -1,4 +1,5 @@
 📁 Project Folder Structure
+```bash
 GatheringWebsite/
 ├── .vscode/
 ├── contact/
